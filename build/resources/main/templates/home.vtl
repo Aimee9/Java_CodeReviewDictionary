@@ -1,0 +1,14 @@
+<h1>Your Dictionary</h1>
+<ul>
+#foreach($title in $vocabulary)
+  <ul><a href="/$title.getId()">$title.getTitle()</a></ul>
+#end
+</ul>
+
+<p>Add a new Word to your Dictionary:</p>
+<form action="/words" method="post">
+ <label for="title">Word:</label>
+  <input id="title" name="title" type="text">
+
+  <button type="submit" class="btn btn-default">Add Word</button>
+</form>

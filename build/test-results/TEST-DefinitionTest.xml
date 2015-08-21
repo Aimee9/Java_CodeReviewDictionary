@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DefinitionTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2015-08-21T19:08:25" hostname="epicodus-101.local" time="0.001">
+  <properties/>
+  <testcase name="definition_instantiatesCorrectly_true" classname="DefinitionTest" time="0.0"/>
+  <testcase name="find_returnsWordWithSameId_secondtitle" classname="DefinitionTest" time="0.0"/>
+  <testcase name="definition_manifestsCorrectMeaning_true" classname="DefinitionTest" time="0.0"/>
+  <testcase name="find_returnsNullForNoWordWithThatId_null" classname="DefinitionTest" time="0.0"/>
+  <testcase name="definition_instantiatesIdCorrectly_true" classname="DefinitionTest" time="0.0"/>
+  <testcase name="uses_returnsMultipleDefsFromArrayList_true" classname="DefinitionTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

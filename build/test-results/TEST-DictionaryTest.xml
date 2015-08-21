@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DictionaryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2015-08-21T17:35:36" hostname="epicodus-101.local" time="0.002">
+  <properties/>
+  <testcase name="word_manifestsSameWord_true" classname="DictionaryTest" time="0.001"/>
+  <testcase name="word_returnsMultipleWordsFromArrayList_true" classname="DictionaryTest" time="0.0"/>
+  <testcase name="word_instantiatesCorrectly_true" classname="DictionaryTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

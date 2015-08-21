@@ -1,0 +1,17 @@
+<h1>$title.getTitle()</h1>
+
+<ul>
+#foreach($meaning in $uses)
+  <ul>$meaning.getMeaning()</ul>
+#end
+</ul>
+
+<p>Add a Definition for $title.getTitle():</p>
+<form action="/definition" method="post">
+ <label for="meaning">Definition:</label>
+  <input id="meaning" name="meaning" type="text">
+
+  <button type="submit" class="btn btn-default">Add Definition</button>
+</form>
+
+<a href="/">Back to All Words</a>

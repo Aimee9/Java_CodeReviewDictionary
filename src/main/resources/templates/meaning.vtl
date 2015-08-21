@@ -1,0 +1,12 @@
+<h1>Definitions:</h1>
+
+
+<ul>
+#foreach($meaning in $uses)
+  <ul>$meaning.getMeaning()</ul>
+#end
+</ul>
+
+
+<a href="/">Back to All Words</a>
+<a href="/word">Back to $title.getTitle()</a>

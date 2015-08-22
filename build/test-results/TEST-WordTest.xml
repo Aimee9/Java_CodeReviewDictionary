@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="WordTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2015-08-21T22:53:24" hostname="epicodus-101.local" time="0.003">
+<testsuite name="WordTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2015-08-22T00:37:36" hostname="epicodus-101.local" time="0.001">
   <properties/>
   <testcase name="word_manifestsSameWord_true" classname="WordTest" time="0.0"/>
   <testcase name="find_returnsWordWithSameId_secondtitle" classname="WordTest" time="0.0"/>

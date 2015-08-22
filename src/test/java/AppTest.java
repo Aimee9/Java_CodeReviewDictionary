@@ -37,7 +37,7 @@ public class AppTest extends FluentTest {
     fill("#title").with("Donkey");
     submit(".btn");
     assertThat(pageSource()).contains("Frog");
-    assertThat(pageSource()).contains("Frog");
+    assertThat(pageSource()).contains("Donkey");
   }
 
   @Test

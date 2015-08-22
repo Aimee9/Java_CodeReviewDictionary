@@ -43,26 +43,23 @@ public class App {
     }, new VelocityTemplateEngine());
 
 
-    get("/:id/meaning", (request, response) -> {
+    get("/meaning", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
-      Word title = Word.find(Integer.parseInt(request.params(":id")));
-      ArrayList<Definition> uses = title.getMeaning();
+      //Word title = Word.find(Integer.parseInt(request.params("meaning")));
 
-
-      model.put("title", title);
-      model.put("uses", uses);
+      //model.put("title", title);
       model.put("template", "templates/meaning.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
 
-    post("/definition", (request, response) -> {
+    post("/meaning", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
       String meaning = request.queryParams("meaning");
       Definition newDefinition = new Definition(meaning);
 
 
-
+      model.put("meaning", meaning);
       model.put("uses", Definition.all());
       model.put("template", "templates/meaning.vtl");
       return new ModelAndView(model, layout);

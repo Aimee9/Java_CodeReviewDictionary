@@ -32,4 +32,8 @@ public class Word {
       return null;
     }
   }
+
+  public static void clear() {
+    vocabulary.clear();
+}
 }

@@ -22,10 +22,30 @@ public class AppTest extends FluentTest {
   }
 
   @Test
-  public void addArtist(){
+  public void addWord(){
     goTo("http://localhost:4567/");
     fill("#title").with("Frog");
     submit(".btn");
+    assertThat(pageSource()).contains("Frog");
+  }
+
+  @Test
+  public void addMultipleWords(){
+    goTo("http://localhost:4567/");
+    fill("#title").with("Frog");
+    submit(".btn");
+    fill("#title").with("Donkey");
+    submit(".btn");
+    assertThat(pageSource()).contains("Frog");
+    assertThat(pageSource()).contains("Frog");
+  }
+
+  @Test
+  public void selectIndividualWordPage(){
+    goTo("http://localhost:4567/");
+    fill("#title").with("Frog");
+    submit(".btn");
+    click("a", withText("Frog"));
     assertThat(pageSource()).contains("Frog");
   }
 }

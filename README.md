@@ -1,6 +1,6 @@
 # Your Dictionary!
 
-##### Build your own library, September, 2015
+##### Build your own dictionary, September, 2015
 
 #### By Aimee Reiss
 

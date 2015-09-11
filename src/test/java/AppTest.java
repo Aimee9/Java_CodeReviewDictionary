@@ -45,7 +45,17 @@ public class AppTest extends FluentTest {
     goTo("http://localhost:4567/");
     fill("#title").with("Frog");
     submit(".btn");
-    click("a", withText("Frog"));
+    goTo("http://localhost:4567/words/1");
     assertThat(pageSource()).contains("Frog");
+  }
+
+  @Test
+  public void addMeaningsToAWord(){
+    goTo("http://localhost:4567/");
+    fill("#title").with("Frog");
+    submit(".btn");
+    goTo("http://localhost:4567/words/1");
+    fill("#meaning").with("Jumping Animal");
+    assertThat(pageSource()).contains("Jumping Animal");
   }
 }

@@ -16,12 +16,12 @@ public class Definition {
     return mMeaning;
   }
 
-  public static ArrayList<Definition> all() {
-    return uses;
+  public int getId() {
+    return mId;
   }
 
-  public int getId() {
-    return uses.size();
+  public static ArrayList<Definition> all() {
+    return uses;
   }
 
   public static Definition find(int id) {
@@ -31,6 +31,4 @@ public class Definition {
       return null;
     }
   }
-
-
 }

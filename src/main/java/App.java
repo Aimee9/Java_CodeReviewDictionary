@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 public class App {
   public static void main(String[] args) {
+    staticFileLocation("/public");
     String layout = "templates/layout.vtl";
 
     get("/", (request, response) -> {
@@ -31,37 +32,27 @@ public class App {
     }, new VelocityTemplateEngine());
 
 
-    get("/:id", (request, response) -> {
+    get("/words/:id", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
-
       Word title = Word.find(Integer.parseInt(request.params(":id")));
-
 
       model.put("title", title);
       model.put("template", "templates/word.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-
-    get("/meaning", (request, response) -> {
+    post("/words/:id/meaning", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
-      //Word title = Word.find(Integer.parseInt(request.params("meaning")));
-
-      //model.put("title", title);
-      model.put("template", "templates/meaning.vtl");
-      return new ModelAndView(model, layout);
-    }, new VelocityTemplateEngine());
-
-
-    post("/meaning", (request, response) -> {
-      HashMap<String, Object> model = new HashMap<String, Object>();
+      Word title = Word.find(Integer.parseInt(request.params(":id")));
+      ArrayList<Definition> definition = title.getDefinitions();
       String meaning = request.queryParams("meaning");
       Definition newDefinition = new Definition(meaning);
 
-
+      model.put("definition", definition);
+      model.put("title", title);
       model.put("meaning", meaning);
       model.put("uses", Definition.all());
-      model.put("template", "templates/meaning.vtl");
+      model.put("template", "templates/word.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 

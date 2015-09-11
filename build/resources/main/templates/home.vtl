@@ -1,7 +1,12 @@
-<h1>Your Dictionary</h1>
+<div class="jumbotron">
+  <h1>Your Dictionary!</h1>
+  <p>Need a place to write down new words you learned?  Place them here.  <br>
+    Then click on your word to add its meanings.  Simple as that! </p>
+</div>
+
 <ul>
 #foreach($title in $vocabulary)
-  <ul><a href="/$title.getId()">$title.getTitle()</a></ul>
+  <ul><a href="/words/$title.getId()">$title.getTitle()</a></ul>
 #end
 </ul>
 
@@ -10,5 +15,5 @@
  <label for="title">Word:</label>
   <input id="title" name="title" type="text">
 
-  <button type="submit" class="btn btn-default">Add Word</button>
+  <button type="submit" class="btn btn-success">Add Word</button>
 </form>

@@ -14,7 +14,7 @@ Run it using Gradle and go to localhost:4567 to see and interact
 ## Technologies Used
 Java was used to code<br>
 Gradle was used to build<br>
-Fluenlenium was used for testing
+Fluentlenium was used for testing
 
 ### Legal
 
